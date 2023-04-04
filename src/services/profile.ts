@@ -8,20 +8,22 @@ const findOneByID = async (_id: any) => {
 }
 
 const findOneByUserID = async (_userId: any) => {
+    console.log('userId a', _userId);
     const result: IProfile = await Profile.findOne({
         userId: _userId
     })
-    return result
+    return result;
 }
 
 const createOne = async (data: any) => {
     const result: IProfile = await Profile.create(data)
+    console.log('create result', result);
     return result
 }
 
 const updateOne = async (data: any) => {
-    const filter = { _id: data._id }
-    delete data._id
+    const filter = { userId: data.userId }
+    console.log('data', data);
     const result: IProfile = await Profile.findOneAndUpdate(filter, data, { new: true })
     return result
 }

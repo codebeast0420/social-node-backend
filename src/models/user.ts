@@ -23,7 +23,7 @@ const UserSchema: Schema = new Schema({
     },
     telephone: {
         type: Array,
-        required: true
+        // required: true
     },
     password: {
         type: String,
@@ -43,11 +43,11 @@ const UserSchema: Schema = new Schema({
     },
     userType: {    // client or professional
         type: String,
-        required: true
+        // required: true
     },
     mailVerified: {
         type: Boolean,
-        required: true
+        // required: true
     }
   })
   
